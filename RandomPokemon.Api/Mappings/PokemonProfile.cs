@@ -15,7 +15,8 @@ public class PokemonProfile : Profile
             .ForMember(dest => dest.TypeOne, opt => opt.MapFrom(src => src.TypeOne.ToString()))
             .ForMember(dest => dest.TypeTwo, opt => opt.MapFrom(src => src.TypeTwo.HasValue ? src.TypeTwo.Value.ToString() : null))
             .ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.Image))
-            .ForMember(dest => dest.Silhouette, opt => opt.MapFrom(src => src.Silhouette));
+            .ForMember(dest => dest.Silhouette, opt => opt.MapFrom(src => src.Silhouette))
+            .ForMember(dest => dest.Evolutions, opt => opt.MapFrom(src => src.Evolutions));
 
         CreateMap<PokemonDto, Pokemon>()
             .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
@@ -24,6 +25,6 @@ public class PokemonProfile : Profile
             .ForMember(dest => dest.TypeTwo, opt => opt.MapFrom(src => string.IsNullOrEmpty(src.TypeTwo) ? null : (EType?)Enum.Parse<EType>(src.TypeTwo)))
             .ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.Image))
             .ForMember(dest => dest.Silhouette, opt => opt.MapFrom(src => src.Silhouette))
-            .ForMember(dest => dest.Evolutions, opt => opt.Ignore());
+            .ForMember(dest => dest.Evolutions, opt => opt.MapFrom(src => src.Evolutions));
     }
 }

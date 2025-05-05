@@ -8,4 +8,5 @@ public class PokemonDto
     public string? TypeTwo { get; set; }
     public byte[]? Image { get; set; }
     public byte[]? Silhouette { get; set; }
+    public List<PokemonDto> Evolutions { get; set; }
 }
