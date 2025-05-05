@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is an application (or API) developed for educational purposes, where a `.db` database stores Pokémon-related information. The goal is to provide a simple way to access and generate random Pokémon using data stored locally in a SQLite database.
+This project is an API developed for educational purposes, where a `.db` database stores Pokémon-related information. The goal is to provide a simple way to access and generate random Pokémon using data stored locally in a SQLite database.
 
 ## Features
 
