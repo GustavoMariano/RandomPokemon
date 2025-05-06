@@ -21,7 +21,7 @@ public class RandomPokemonController : ControllerBase
     [HttpGet("random", Name = "RandomPokemon")]
     public async Task<ActionResult<PokemonDto>> GetAsync()
     {
-        var pokemon = await _pokemonService.GetRandomPokemon(new Random().Next(1, 152));
+        var pokemon = await _pokemonService.GetPokemonByPokedexId(new Random().Next(1, 152));
         return Ok(pokemon);
     }
 
@@ -29,6 +29,13 @@ public class RandomPokemonController : ControllerBase
     public async Task<ActionResult<PokemonDto>> GetByIdAsync(int pokedexId)
     {
         var pokemon = await _pokemonService.GetPokemonByPokedexId(pokedexId);
+        return Ok(pokemon);
+    }
+
+    [HttpGet("byPokemonName", Name = "GetPokemonName")]
+    public async Task<ActionResult<PokemonDto>> GetByNameAsync(string name)
+    {
+        var pokemon = await _pokemonService.GetPokemonByName(name);
         return Ok(pokemon);
     }
 

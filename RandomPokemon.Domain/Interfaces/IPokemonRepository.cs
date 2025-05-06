@@ -4,7 +4,7 @@ namespace RandomPokemon.Domain.Interfaces;
 
 public interface IPokemonRepository
 {
-    Task<Pokemon?> GetRandomPokemon(int pokedexId);
     Task<Pokemon?> GetPokemonByPokedexId(int pokedexId);
+    Task<Pokemon?> GetPokemonByName(string name);
     Task<List<Pokemon>> GetAllPokemons();
 }

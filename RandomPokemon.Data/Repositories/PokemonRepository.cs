@@ -20,14 +20,14 @@ public class PokemonRepository : IPokemonRepository
             .ToListAsync();
     }
 
-    public async Task<Pokemon?> GetPokemonByPokedexId(int pokedexId)
+    public async Task<Pokemon?> GetPokemonByName(string name)
     {
         return await _context.Pokemons
-            .Include(p => p.Evolutions)
-            .FirstOrDefaultAsync(p => p.PokedexId == pokedexId);
+            .Include (p => p.Evolutions)
+            .FirstOrDefaultAsync(p => p.Name == name);
     }
 
-    public async Task<Pokemon?> GetRandomPokemon(int pokedexId)
+    public async Task<Pokemon?> GetPokemonByPokedexId(int pokedexId)
     {
         return await _context.Pokemons
             .Include(p => p.Evolutions)
