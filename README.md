@@ -1,26 +1,67 @@
-# RandomPokemon
+# 🌟 RandomPokémon: A Pokémon Web Adventure
 
-## Description
+[![.NET](https://img.shields.io/badge/.NET-9.0-blueviolet)](https://dotnet.microsoft.com/)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-This project is an API developed for educational purposes, where a `.db` database stores Pokémon-related information. The goal is to provide a simple way to access and generate random Pokémon using data stored locally in a SQLite database.
+A dynamic and engaging web application for Pokémon fans to explore, guess, and dive deep into the world of Pokémon. Built with modern .NET technologies, RandomPokémon integrates with a Pokémon API to deliver a fun and interactive experience.
 
-## Features
+## 🚀 Technologies Used
+- **Backend**: .NET 9.0, Clean Architecture, Domain-Driven Design (DDD)
+- **Frontend**: ASP.NET Core MVC, Bootstrap 5, jQuery
+- **Database**: SQLite
+- **API**: Pokémon API
+- **Tools**: Visual Studio, Git
 
-- **Generate Random Pokémon**: The API allows you to receive a random Pokémon based on the database.
-- **Local Storage**: All Pokémon data is stored in a SQLite database (`pokemon.db`).
-- **API Interaction**: The application can be accessed via endpoints that return information about Pokémon.
+## 🎯 Purpose
+- Provide an interactive platform for Pokémon enthusiasts to browse the Pokédex, play a guessing game, and view detailed Pokémon stats.
+- Showcase modern .NET development practices with a modular and scalable architecture.
+- Serve as a portfolio project demonstrating web development, API integration, and database management.
 
-## Technologies
+## 🌟 Key Features
+- **Pokémon List**: Browse the complete Pokédex with data fetched in real-time from the Pokémon API.
+- **Who's that Pokémon?**: A fun guessing game to identify Pokémon by their silhouettes and attributes.
+- **Pokémon Details**: Search and view detailed information, including types, evolutions, and images.
+- **Search Bar**: Quickly find any Pokémon by name from any page.
+- **Responsive Design**: A consistent UI with a modern footer across all pages, optimized for desktop and mobile.
+- **Clean Architecture**: Modular backend with Api, Contracts, Data, Domain, and Services projects.
 
-- **Language**: C#
-- **Database**: SQLite (`pokemon.db`)
-- **Git LFS**: Used to manage large files such as the database.
+## 📈 Highlighted Features
+- **Guess Game**: Test your Pokémon knowledge with a silhouette-based quiz.
+- **Search Functionality**: Instant Pokémon lookup via a navbar search bar.
+- **Detailed Stats**: Explore Pokémon types, evolutions, and images in a clean, card-based layout.
+- **SQLite Integration**: Efficient data persistence for game state and user interactions.
+- **Modern UI**: Styled with Bootstrap 5 and custom CSS for a Pokémon-themed experience.
 
-## How to Run the Project
+## 📂 Project Structure
+- **Api**: REST endpoints for Pokémon data.
+- **Contracts**: Interfaces and DTOs for communication.
+- **Data**: SQLite database access and repositories.
+- **Domain**: Business logic and entities.
+- **Services**: Application logic and orchestration.
+- **RandomPokemon.WebSite**: ASP.NET Core MVC frontend.
 
-1. **Clone the repository**
-
-   If you haven't cloned the repository yet, do it with the command:
-
+## 🛠️ How to Use
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/GustavoMariano/RandomPokemon.git
+   ```
+2. **Install dependencies**:
+   ```bash
+   dotnet restore
+   ```
+3. **Configure settings**:
+   - Update the Pokémon API URL in `RandomPokemon.WebSite.Controllers.HomeController.cs`.
+4. **Run the application**:
+   ```bash
+   dotnet run
+   ```
+5. **Explore**:
+   - Browse the Pokédex, play the guessing game, or search for your favorite Pokémon!
+
+## 🔗 Useful Resources
+- [ASP.NET Core Documentation](https://learn.microsoft.com/en-us/aspnet/core/) - Learn about MVC and .NET 9.0.
+- [Bootstrap 5](https://getbootstrap.com/docs/5.0/) - UI framework used for styling.
+- [SQLite](https://www.sqlite.org/) - Lightweight database used for persistence.
+
+## 📝 License
+This project is licensed under the [MIT License](LICENSE). Feel free to use it for educational purposes, personal projects, or as inspiration for your own Pokémon adventures!
