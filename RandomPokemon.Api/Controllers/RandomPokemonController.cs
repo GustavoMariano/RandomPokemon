@@ -35,7 +35,8 @@ public class RandomPokemonController : ControllerBase
     [HttpGet("byPokemonName", Name = "GetPokemonName")]
     public async Task<ActionResult<PokemonDto>> GetByNameAsync(string name)
     {
-        var pokemon = await _pokemonService.GetPokemonByName(name);
+        string normalizedName = char.ToUpper(name[0]) + name.Substring(1).ToLower();
+        var pokemon = await _pokemonService.GetPokemonByName(normalizedName);
         return Ok(pokemon);
     }
 
