@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="RandomPokemon.WebSite.Client\**" />
+    <Compile Remove="RandomPokemon.WebSite\**" />
+    <Content Remove="RandomPokemon.WebSite.Client\**" />
+    <Content Remove="RandomPokemon.WebSite\**" />
+    <EmbeddedResource Remove="RandomPokemon.WebSite.Client\**" />
+    <EmbeddedResource Remove="RandomPokemon.WebSite\**" />
+    <None Remove="RandomPokemon.WebSite.Client\**" />
+    <None Remove="RandomPokemon.WebSite\**" />
+  </ItemGroup>
+
+</Project>

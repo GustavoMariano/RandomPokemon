@@ -1,0 +1,129 @@
+
+.navbar {
+    padding: 0.5rem 1rem;
+}
+
+    .navbar form {
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .navbar input[type="search"] {
+        font-size: 0.9rem;
+        padding: 0.375rem 0.75rem;
+    }
+
+    .navbar .btn {
+        font-size: 0.9rem;
+        padding: 0.375rem 0.75rem;
+    }
+
+@media (max-width: 576px) {
+    .navbar form {
+        margin-top: 0.5rem;
+        max-width: 100%;
+    }
+}
+
+.hero-section {
+    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+    padding: 60px 20px;
+    margin-bottom: 40px;
+}
+
+    .hero-section h1 {
+        font-size: 3.5rem;
+        font-weight: bold;
+        color: #2c3e50;
+    }
+
+    .hero-section .lead {
+        font-size: 1.25rem;
+        color: #495057;
+        margin-bottom: 20px;
+    }
+
+.btn-success {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+}
+
+    .btn-success:hover {
+        background-color: #45a049;
+        border-color: #45a049;
+    }
+
+.features-section {
+    padding: 40px 20px;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+    }
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    margin-top: 0;
+}
+
+.feature-card p {
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+.btn-outline-success {
+    color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+    .btn-outline-success:hover {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+.about-section {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    margin-top: 40px;
+}
+
+    .about-section h2 {
+        font-size: 2rem;
+        color: #2c3e50;
+        margin-bottom: 20px;
+    }
+
+    .about-section p {
+        font-size: 1.1rem;
+        color: #495057;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+
+    .feature-card {
+        margin-bottom: 30px;
+    }
+}

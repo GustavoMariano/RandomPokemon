@@ -1,0 +1,62 @@
+﻿@model RandomPokemon.WebSite.Models.Pokemon
+@{
+    ViewData["Title"] = "Guess the Pokémon";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<link rel="stylesheet" href="~/css/guesspokemon.css" />
+
+<div class="game-container">
+    <div id="start-section">
+        <button id="start-button" class="start-button">Start</button>
+    </div>
+
+    <div id="game-section" style="display: none;">
+        <div class="silhouette-container">
+            <img id="pokemon-image" alt="Pokémon Silhouette" />
+        </div>
+
+        <div id="correct-attributes">
+            <p id="correct-name" style="display: none;"></p>
+            <p id="correct-type1" style="display: none;"></p>
+            <p id="correct-type2" style="display: none;"></p>
+            <p id="correct-evolutions" style="display: none;"></p>
+        </div>
+
+        <div class="guess-form">
+            <div id="guess-name-group" class="form-group" style="display: none;">
+                <label for="guess-name">Name:</label>
+                <input type="text" id="guess-name" class="guess-input" placeholder="Enter Pokémon name" />
+            </div>
+            <div id="guess-type1-group" class="form-group" style="display: none;">
+                <label for="guess-type1">Type 1:</label>
+                <input type="text" id="guess-type1" class="guess-input" placeholder="Enter primary type" />
+            </div>
+            <div id="guess-type2-group" class="form-group" style="display: none;">
+                <label for="guess-type2">Type 2:</label>
+                <input type="text" id="guess-type2" class="guess-input" placeholder="Enter secondary type" />
+            </div>
+            <div id="guess-evolutions-group" class="form-group" style="display: none;">
+                <label for="guess-evolutions">Evolutions (comma-separated):</label>
+                <input type="text" id="guess-evolutions" class="guess-input" placeholder="Enter evolution names (e.g., Bulbasaur, Ivysaur)" />
+            </div>
+            <button id="submit-guess" class="submit-button">Submit Guess</button>
+            <p id="error-message" style="color: red; display: none;"></p>
+        </div>
+    </div>
+
+    <div id="result-section" style="display: none;">
+        <h3>Result</h3>
+        <div class="silhouette-container">
+            <img id="pokemon-image-result" alt="Pokémon Image" />
+        </div>
+        <p id="result-message"></p>
+        <button id="play-again" class="play-again-button">Play Again</button>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/guesspokemon.js"></script>
+}

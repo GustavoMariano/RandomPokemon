@@ -1,0 +1,43 @@
+﻿@model RandomPokemon.WebSite.Models.Pokemon
+@{
+    ViewData["Title"] = "RandomPokémon";
+}
+
+<section class="hero-section text-center">
+    <h1 class="display-3">Welcome to RandomPokémon</h1>
+    <p class="lead">Explore the world of Pokémon with our interactive web app! Guess Pokémon, view detailed stats, or browse the full Pokédex.</p>
+    <a class="btn btn-success btn-lg" asp-controller="Home" asp-action="GuessPokemon">Play Who's that Pokémon?</a>
+</section>
+
+<section class="features-section">
+    <div class="row">
+        <div class="col-md-4 feature-card">
+            <h3>Pokémon List</h3>
+            <p>Browse the complete list of Pokémon from our Pokédex, powered by a real-time API.</p>
+            <a class="btn btn-outline-success" asp-controller="Home" asp-action="AllPokemons">View Pokédex</a>
+        </div>
+        <div class="col-md-4 feature-card">
+            <h3>Who's that Pokémon?</h3>
+            <p>Test your knowledge in our fun guessing game! Identify Pokémon by their silhouettes and attributes.</p>
+            <a class="btn btn-outline-success" asp-controller="Home" asp-action="GuessPokemon">Play Now</a>
+        </div>
+        <div class="col-md-4 feature-card">
+            <h3>Pokémon Details</h3>
+            <p>Search for any Pokémon to view detailed information, including types, evolutions, and images.</p>
+            <a class="btn btn-outline-success" asp-controller="Home" asp-action="ViewPokemon">Search Pokémon</a>
+        </div>
+    </div>
+</section>
+
+<section class="about-section text-center">
+    <h2>About RandomPokémon</h2>
+    <p>
+        RandomPokémon is a dynamic web application crafted for Pokémon enthusiasts, built using modern .NET technologies. 
+        The backend, developed with <strong>.NET 9.0</strong> across the Api, Contracts, Data, Domain, and Services projects, 
+        follows the <strong>Clean Architecture</strong> pattern with influences from Domain-Driven Design (DDD), ensuring a modular and maintainable codebase. 
+        The web frontend, implemented with the <strong>MVC</strong> pattern in ASP.NET Core, provides an engaging user experience, 
+        while <strong>SQLite</strong> powers the data storage for efficient persistence. Integrated with a Pokémon API, this app lets you explore, guess, and dive deep into Pokémon details. 
+        Whether you're a casual fan or a Pokédex master, RandomPokémon has something for you!
+        Check out the source code on <a href="https://github.com/GustavoMariano/RandomPokemon" target="_blank">GitHub</a>!
+    </p>
+</section>
