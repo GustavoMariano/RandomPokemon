@@ -70,3 +70,19 @@
         margin: 5px 0;
         color: #666;
     }
+
+.pokemon-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.pokemon-card-link:hover .pokemon-card {
+    transform: translateY(-5px);
+}
+
+.pokemon-card-link .carousel,
+.pokemon-card-link .carousel * {
+    pointer-events: auto;
+}

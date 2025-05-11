@@ -44,7 +44,9 @@
                 <ul class="list-group w-50 mx-auto">
                     @foreach (var evolution in Model.Evolutions)
                     {
+                        <a asp-controller="Home" asp-action="GetPokemonByName" asp-route-name="@evolution.Name" class="pokemon-card-link" aria-label="View details for @(evolution.Name ?? "Unknown Pokémon")">
                         <li class="list-group-item">@evolution.Name</li>
+                        </a>
                     }
                 </ul>
             }
